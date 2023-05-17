@@ -1,0 +1,265 @@
+@import 'fonts.css';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.nav {
+  background: #3E284F;
+  box-shadow: 0px 0px 20px rgba(62, 40, 79, 0.5);
+  padding: 20px 0;
+}
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 18px;
+  line-height: 28px;
+  color: #FFFFFF;
+  font-family: 'SR';
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.nav__right-amount {
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  font-size: 12px;
+  line-height: 10px;
+  color: #3E284F;
+  font-family: 'OR';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  transform: scale(0);
+  transition: 300ms;
+}
+
+.nav__right-amount.active {
+  transform: scale(1);
+}
+
+
+
+.nav__right-btn {
+  position: relative;
+}
+
+.view {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 75px;
+}
+.burgers {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 24px;
+}
+.burgers__item {
+  background: #F4F4F4;
+  box-shadow: 0px 20px 20px -15px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+}
+.burgers__item-count {
+  opacity: 0;
+  transition: 300ms;
+  width: 30px;
+  height: 30px;
+  background: #3E284F;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  font-family: 'OR';
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+}
+
+.burgers__item-count.active {
+  opacity: 1;
+}
+
+
+.burgers__item-img {
+  margin-top: -60px;
+}
+.burgers__item-title {
+  font-size: 18px;
+  line-height: 28px;
+  color: #404040;
+  font-family: 'SR';
+  margin: 20px 0;
+}
+.burgers__item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.burgers__item-price {
+  background: #3E284F;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 22px;
+  color: white;
+  font-family: 'OB';
+}
+.burgers__item-add {
+  background: #3E284F;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 300ms;
+}
+.burgers__item-add:hover {
+  background: green;
+}
+
+.nav__right {
+  position: relative;
+}
+
+.nav__right-list {
+  transform: translateY(-150%);
+  transition: 300ms;
+  position: absolute;
+  width: 357px;
+  height: 390px;
+  right: -10px;
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.nav__right-list.active {
+  transform: translateY(0);
+}
+
+.nav__right-list::before {
+  content: url(../images/arrow-basket.svg);
+  position: absolute;
+  right: 13px;
+  top: -13px;
+}
+
+
+
+
+.nav__right-list-top {
+  background: #775194;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  font-family: 'OB';
+  border-radius: 10px 10px 0 0;
+}
+.nav__right-list-bottom {
+  background: #00A441;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  font-family: 'OB';
+}
+.nav__right-list-items {
+  background: #FFFFFF;
+  height: 100%;
+  padding: 16px;
+}
+
+.nav__right-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__item-left {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.nav__item-left img {
+  width: 70px;
+  height: 54px;
+}
+.nav__item-left-name {
+  font-size: 16px;
+  line-height: 25px;
+  color: #404040;
+  font-family: 'SR';
+}
+.nav__item-left-price {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: 'OR';
+}
+.nav__item-right {
+  display: flex;
+  background: #BBBBBB;
+  border-radius: 4px; 
+}
+.nav__item-btn {
+  width: 25px;
+  height: 25px;
+  transition: 300ms;
+}
+.minus:hover {
+  background: red;
+}
+.plus:hover {
+  background: green;
+}
+
+
+.nav__item-count {
+  background: #EEEEEE;
+  border: 0.5px solid #BBBBBB;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
